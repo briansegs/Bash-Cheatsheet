@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+	<head>
+		<meta charset="utf-8">
+		<link href="style.css" rel="stylesheet">
+		<title>
+				🖥️ Bash Cheatsheet
+		</title>
+	</head>
+	<body>
+		<section id="overlay">
+			<header class="row">
+				<img src="logo.png" alt="logo" class="col" height="80">
+				<h1 class="col">
+					Bash Cheat sheet
+				</h1>
+			</header>	
+			<hr>
+			<section>
+				<table>
+					<thead>
+						<tr><!-- Heading -->
+							<th colspan="2">
+								VARIABLES
+							</th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr>
+							<td class="td1">
+								varname<code>=</code>value
+							</td>
+							<td class="td2">
+								defines a variable.
+							</td>
+						</tr>
+						<tr>
+							<td class="td1">
+								<code>echo $</code>varname
+							</td>
+							<td class="td2">
+								checks a variable's value.
+							</td>
+						</tr>
+					</tbody>
+					<thead>
+						<tr><!-- Heading -->
+							<th colspan="2">
+								Basic Terminal Navigation
+							</th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr>
+							<td class="td1">
+								<code>ls</code>
+							</td>
+							<td class="td2">
+								lists your files in current directory, <code>ls &lt;dir&gt;</code> to print 
+									files in a specific directory.
+							</td>
+						</tr>
+						<tr>
+							<td class="td1">
+								<code>ls -l</code>
+							</td>
+							<td class="td2">
+								lists your files in 'long format', which contains the exact size of the file, 
+								who owns the file and who has the right to look at it, and when it was last 
+								modified.
+							</td>
+						</tr>
+						<tr>
+							<td class="td1">
+								<code>ls &lt;folderName&gt;</code>
+							</td>
+							<td class="td2">
+								list files in folder.
+							</td>
+						</tr>
+						<tr>
+							<td class="td1">
+								<code>*</code>(patternlist)
+							</td>
+							<td class="td2">
+								matches zero or more occurrences of the given patterns.
+							</td>
+						</tr>
+						<tr>
+							<td class="td1">
+								<code>cd</code>
+							</td>
+							<td class="td2">
+								changes to home.
+							</td>
+						</tr>
+						<tr>
+							<td class="td1">
+								<code>cd ..</code>
+							</td>
+							<td class="td2">
+								changes to the parent directory.
+							</td>
+						</tr>
+						<tr>
+							<td class="td1">
+								<code>cd &lt;folderName&gt;</code>
+							</td>
+							<td class="td2">
+								changes directory.
+							</td>
+						</tr>
+						<tr>
+							<td class="td1">
+								<code>pwd</code>
+							</td>
+							<td class="td2">
+								print working directory.
+							</td>
+						</tr>
+					</tbody>
+					<thead>
+						<tr><!-- Heading -->
+							<th colspan="2">
+								Basic file manipulation
+							</th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr>
+							<td class="td1">
+								<code>mkdir</code>
+							</td>
+							<td class="td2">
+								create new folder.
+							</td>
+						</tr>
+						<tr>
+							<td class="td1">
+								<code>mv &lt;filename&gt; &lt;dir&gt;/</code>
+							</td>
+							<td class="td2">
+								move a file to a directory.
+							</td>
+						</tr>
+						<tr>
+							<td class="td1">
+								<code>rm &lt;filename&gt;</code>
+							</td>
+							<td class="td2">
+								delete file.
+							</td>
+						</tr>
+						<tr>
+							<td class="td1">
+								<code>rm -i &lt;filename&gt;</code>
+							</td>
+							<td class="td2">
+								ask for confirmation before deleting file.
+							</td>
+						</tr>
+						<tr>
+							<td class="td1">
+								<code>rmdir &lt;dirname&gt;</code>
+							</td>
+							<td class="td2">
+								remove an empty directory.
+							</td>
+						</tr>
+					</tbody>
+					<thead>
+						<tr><!-- Heading -->
+							<th colspan="2">
+								Downloading (curl)
+							</th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr>
+							<td class="td1">
+								<code>curl &lt;'web address'&gt;</code>
+							</td>
+							<td class="td2">
+								downloads a file from the web. By default, it will download the file
+								 and display the contents in the terminal.
+							</td>
+						</tr>
+						<tr>
+							<td class="td1">
+								<code>curl -L &lt;'web address'&gt;</code>
+							</td>
+							<td class="td2">
+								The same as <code>curl</code> but, follows redirects.
+							</td>
+						</tr>
+						<tr>
+							<td class="td1">
+								<code>curl -o &lt;filename&gt; &lt;'web address'&gt;</code>
+							</td>
+							<td class="td2">
+								The same as <code>curl</code> but, outputs the data to a file. 
+								can be used with <code>-L</code>.
+							</td>
+						</tr>
+					</tbody>
+					<thead>
+						<tr><!-- Heading -->
+							<th colspan="2">
+								Viewing files (cat, less)
+							</th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr>
+							<td class="td1">
+								<code>cat &lt;filename&gt;</code>
+							</td>
+							<td class="td2">
+								displays the full contents of the file.
+							</td>
+						</tr>
+						<tr>
+							<td class="td1">
+								<code>less &lt;filename&gt;</code>
+							</td>
+							<td class="td2">
+								displays the output in a format that allows you to search and scroll.<br> 
+								spacebar or down arrow = scroll down.
+								b key or up arrow = scroll up.
+								forward slash / = search. 
+								q key = exit.
+							</td>
+						</tr>
+					</tbody>
+				<tbody>
+					<tr>
+				</tbody>
+					
+				</table>
+			</section>
+		</section>
+		
+	</body>
+
+</html>
